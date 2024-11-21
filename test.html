@@ -1,0 +1,206 @@
+<html>
+<head>
+    <title>Offbeat</title>
+    <script src="https://unpkg.com/react/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div id="root"></div>
+    <script type="text/babel">
+        const Header = () => (
+            <header className="flex justify-between items-center p-4 bg-black">
+                <div className="text-2xl font-bold">OFFBEAT</div>
+                <nav className="space-x-4 hidden md:flex">
+                    <a href="#" className="text-orange-500">HOME</a>
+                    <a href="#" className="hover:text-orange-500">PAGES</a>
+                    <a href="#" className="hover:text-orange-500">EVENTS</a>
+                    <a href="#" className="hover:text-orange-500">PORTFOLIO</a>
+                    <a href="#" className="hover:text-orange-500">BLOG</a>
+                    <a href="#" className="hover:text-orange-500">SHOP</a>
+                    <a href="#" className="hover:text-orange-500">ELEMENTS</a>
+                </nav>
+                <div className="space-x-4">
+                    <i className="fas fa-search"></i>
+                    <i className="fas fa-shopping-cart"></i>
+                    <i className="fas fa-bars md:hidden"></i>
+                </div>
+            </header>
+        );
+
+        const HeroSection = () => (
+            <section className="relative">
+                <img src="https://placehold.co/1920x600" alt="Concert background" className="w-full h-96 object-cover"/>
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white">
+                    <h1 className="text-6xl font-bold">OFFBEAT</h1>
+                    <p className="text-2xl">Feel the beat of the night</p>
+                    <button className="mt-4 px-6 py-2 bg-orange-500 text-white font-bold">BUY TICKET</button>
+                </div>
+            </section>
+        );
+
+        const BookingSection = () => (
+            <section className="text-center py-16">
+                <h2 className="text-4xl font-bold">BOOK YOUR SEATS NOW.</h2>
+                <div className="mt-8 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <input type="text" placeholder="1 Person" className="p-2 bg-gray-800 text-white"/>
+                    <input type="text" placeholder="12/12/2024" className="p-2 bg-gray-800 text-white"/>
+                    <input type="text" placeholder="8:00 pm" className="p-2 bg-gray-800 text-white"/>
+                    <button className="px-6 py-2 bg-orange-500 text-white font-bold">BOOK</button>
+                </div>
+            </section>
+        );
+
+        const GallerySection = () => (
+            <section className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+                <img src="https://placehold.co/600x400" alt="Cigar lounge" className="w-full h-full object-cover"/>
+                <img src="https://placehold.co/600x400" alt="Abstract art" className="w-full h-full object-cover"/>
+                <img src="https://placehold.co/600x400" alt="Neon sign" className="w-full h-full object-cover"/>
+                <img src="https://placehold.co/600x400" alt="Guitarist" className="w-full h-full object-cover"/>
+            </section>
+        );
+
+        const WorkSection = () => (
+            <section className="text-center py-16">
+                <h2 className="text-4xl font-bold">CHECK OUR WORK</h2>
+                <p className="mt-4 max-w-2xl mx-auto">We are a full-service design agency specializing in creating unique, innovative experiences. Our team of experts is dedicated to bringing your vision to life.</p>
+                <button className="mt-4 px-6 py-2 bg-orange-500 text-white font-bold">READ MORE</button>
+            </section>
+        );
+
+        const BeerSection = () => (
+            <section className="text-center py-16">
+                <h2 className="text-4xl font-bold">CRAFT BEER SELECTION.</h2>
+                <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex justify-between">
+                        <span>SUMMIT CRAFT</span>
+                        <span>$2.95</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>WEISSE</span>
+                        <span>$3.95</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>BARLEY GARDEN</span>
+                        <span>$4.15</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>BOMBER</span>
+                        <span>$5.95</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>BROOKLYN</span>
+                        <span>$4.15</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>HILL BROTHERS</span>
+                        <span>$3.95</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>HOBGOBLIN</span>
+                        <span>$4.15</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>PAULANER</span>
+                        <span>$3.95</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>BLUE MOON</span>
+                        <span>$4.30</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>CULTURE ON TAP</span>
+                        <span>$4.50</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>BREWDOG</span>
+                        <span>$4.30</span>
+                    </div>
+                    <div className="flex justify-between">
+                        <span>KNOCKER</span>
+                        <span>$4.50</span>
+                    </div>
+                </div>
+                <button className="mt-4 px-6 py-2 bg-orange-500 text-white font-bold">VIEW MENU</button>
+            </section>
+        );
+
+        const SubscribeSection = () => (
+            <section className="text-center py-16 bg-orange-500">
+                <h2 className="text-4xl font-bold">DON'T MISS OUT FUN. SUBSCRIBE.</h2>
+                <div className="mt-8 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
+                    <input type="text" placeholder="Your Email" className="p-2 bg-gray-800 text-white"/>
+                    <button className="px-6 py-2 bg-black text-white font-bold">SUBSCRIBE</button>
+                </div>
+            </section>
+        );
+
+        const Footer = () => (
+            <footer className="bg-black text-white py-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div>
+                        <h3 className="font-bold">OPENING HOURS</h3>
+                        <p>Monday - 10:00 - 22:00</p>
+                        <p>Tuesday - 10:00 - 22:00</p>
+                        <p>Wednesday - 10:00 - 22:00</p>
+                        <p>Thursday - 10:00 - 22:00</p>
+                        <p>Friday - 10:00 - 22:00</p>
+                        <p>Saturday - 10:00 - 22:00</p>
+                        <p>Sunday - 10:00 - 22:00</p>
+                    </div>
+                    <div>
+                        <h3 className="font-bold">LATEST POSTS</h3>
+                        <p>Amsterdam's Jazz Bands September Battle - Day 1</p>
+                        <p>Amsterdam's Jazz Bands September Battle - Day 2</p>
+                        <p>Amsterdam's Jazz Bands September Battle - Day 3</p>
+                        <p>Amsterdam's Jazz Bands September Battle - Day 4</p>
+                    </div>
+                    <div>
+                        <h3 className="font-bold">CONTACT US</h3>
+                        <p>Phone: +123 456 789</p>
+                        <p>Email: info@offbeat.com</p>
+                        <p>Address: 123 Main Street, New York, NY</p>
+                    </div>
+                    <div>
+                        <h3 className="font-bold">FOLLOW US</h3>
+                        <div className="space-x-4">
+                            <i className="fab fa-facebook"></i>
+                            <i className="fab fa-twitter"></i>
+                            <i className="fab fa-instagram"></i>
+                            <i className="fab fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+                <div className="text-center mt-8">
+                    <p>&copy; 2023 Offbeat. All Rights Reserved.</p>
+                </div>
+            </footer>
+        );
+
+        const App = () => {
+            return (
+                <div>
+                    <Header />
+                    <HeroSection />
+                    <BookingSection />
+                    <GallerySection />
+                    <WorkSection />
+                    <BeerSection />
+                    <SubscribeSection />
+                    <Footer />
+                </div>
+            );
+        };
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>
